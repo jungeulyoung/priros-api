@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lnt.priros.mapper.IntroMapper">
+
+  <select id="selectOne" resultType="IntroDto">
+    <![CDATA[
+    select (select count(1)
+            from user
+            where useFlag <> 'N'
+              and position in ('법무사', '변호사'))                     as userCnt
+         , (select count(1) from trade_case tc)                   as totalCnt
+         , (select count(1)
+            from trade_case tc
+            where tc.created >= DATE_ADD(now(), INTERVAL -6 DAY)) as recentCaseCnt
+    ]]>
+  </select>
+</mapper>

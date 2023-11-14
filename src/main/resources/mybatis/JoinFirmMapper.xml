@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lnt.priros.mapper.JoinFirmMapper">
+  <select id="selectByMobileHashed" resultType="JoinFirm">
+     <![CDATA[
+    SELECT *
+    FROM join_firm
+    WHERE mobileHashed = #{mobileHashed}
+      AND state <> 'N'
+      AND firmKind <> '20'
+    LIMIT 0, 1
+    ]]>
+  </select>
+
+  <insert id="insertOne" parameterType="joinFirm" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+    INSERT INTO join_firm
+    (firmType,
+     mobile,
+     mobileHashed,
+     phone,
+     email,
+     emailHashed,
+     charge,
+     position,
+     state,
+     message,
+     firmCode,
+     securityKey,
+     created,
+     updated,
+     firmKind)
+    VALUES (#{firmType},
+            #{mobile},
+            #{mobileHashed},
+            #{phone},
+            #{email},
+            #{emailHashed},
+            #{charge},
+            #{position},
+            #{state},
+            #{message},
+            #{firmCode},
+            #{securityKey},
+            NOW(),
+            NOW(),
+            #{firmKind})
+  </insert>
+</mapper>

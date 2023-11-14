@@ -1,0 +1,162 @@
+system:
+  env: LOCAL
+domain:
+  url: http://localhost
+
+logging:
+  pattern: '[%d]%-5p %-5t:%X{messageId} %m %c{0}.%M\\(%F:%L\\)%n'
+
+page:
+  default:
+    title: PRIROS [LOCAL]
+
+spring:
+  jwt:
+    secret:
+      key: "weewqeqweqwe34ft24tgsgg2wqeqweqweqweqklnklqjeiqheklqwjwlekjqwlejlqjelqwjlejqkljekljq4"
+
+rm:
+  case:
+    document:
+      file:
+        path: C:/Java/upload/file/upload/rmcase/
+  document:
+    file:
+      path: C:/Java/upload/file/upload/rm/doc/
+  real:
+    estate:
+      file:
+        path: C:/Java/upload/file/upload/realestate/doc/
+
+firm:
+  license:
+    file:
+      path: C:/Java/upload/file/upload/license/
+user:
+  profile:
+    file:
+      path: C:/Java/upload/file/upload/profile/
+
+temp:
+  file:
+    path: C:/Development/Temp/priros/upload/temp/
+board:
+  upload:
+    file:
+      path: C:/Development/Temp/priros/upload/board/
+consult:
+  upload:
+    file:
+      path: C:/Development/Temp/priros/upload/consult/
+inquiry:
+  upload:
+    file:
+      path: C:/Development/Temp/priros/upload/inquiry/
+request:
+  report:
+    upload:
+      file:
+        path: C:/Development/Temp/priros/upload/requestreport/
+
+buybond:
+  longin:
+    userid: testuser02
+    password: asdf!234
+  base:
+    url: https://test-dlaw.ktnet.com/new/app/
+
+mail:
+  smtp:
+    host: smtp.gmail.com
+    port: 465
+  pop:
+    host: pop.gmail.com
+    port: 995
+  user: priros.rpa@gmail.com
+  password: yevzhmvhhkfgojsy
+  regist:
+    user:
+      url: http://localhost/main/registUser.rm?cmd=
+    file:
+      name: C:/Java/mail/registUser.html
+
+alim:
+  regist:
+    user:
+      url: http://localhost/main/registUser.rm?cmd=
+  estimate:
+    url: http://localhost/link/estimate.rm?cmd=
+  repay:
+    url: http://localhost/link/repay.rm?cmd=
+  charge:
+    url: http://localhost/link/charge.rm?cmd=
+  main:
+    url: http://219.251.136.162:5090
+  firm:
+    review:
+      url: http://localhost/link/clientReview.rm?cmd=
+  matching:
+    url: http://localhost/link/matching.rm?cmd=
+  profile:
+    refused:
+      url: http://219.251.136.162:5090/main/helpCenterFaq.rm
+
+app:
+  push:
+    board:
+      url: http://localhost/main/helpCenterNotice.rm
+
+
+juso:
+  api:
+    key: U01TX0FVVEgyMDIxMDIwMzE3NTUyODExMDc3Nzc=
+
+vender:
+  send:
+    url: https://dev-dlaw.ktnet.com/new/market/%s/s
+  link:
+    url: http://localhost
+
+aligo:
+  test:
+    mode: Y
+
+nice:
+  respond:
+    sucess:
+      url: http://localhost:8080/nice/checkSuccess.rm
+    error:
+      url: http://localhost:5090/nice/checkError.rm
+  pay:
+    mid: payutest1m
+    key: Qo8sKAjtqnV5ttqqW9GKXzSmPos8Mh1+AoR1n94PquFR8otbIq9EjJFaYcJocN/bIcJqU10eNHRp6W6mWyqpWw==
+    join:
+      return:
+        url: http://219.251.136.162:5090/nicePay/joinResult.rm
+    regist:
+      account:
+        return:
+          url: http://219.251.136.162:5090/nicePay/registAccountResult.rm
+    auth:
+      payment:
+        return:
+          url: http://219.251.136.162:5090/nicePay/authPaymentResult.rm
+      common:
+        payment:
+          return:
+            url: http://219.251.136.162:5090/nicePay/commonAuthPaymentResult.rm
+    my:
+      page:
+        return:
+          url: http://219.251.136.162:5090/nicePay/myPageResult.rm
+    pay:
+      process:
+        return:
+          url: http://219.251.136.162:5090/nicePay/payProcessResult.rm
+
+iros:
+  api:
+    url: https://dev-api.priros.co.kr/api/app
+
+directlaw:
+  firmcode: MDAXOTEX

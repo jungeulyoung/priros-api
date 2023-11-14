@@ -1,0 +1,177 @@
+system:
+  env: PROD
+domain:
+  url: https://www.priros.com
+
+page:
+  default:
+    title: PRIROS
+
+spring:
+  jwt:
+    secret:
+      key: "weewqeqweqwe34ft24tgsgg2wqeqweqweqweqklnklqjeiqheklqwjwlekjqwlejlqjelqwjlejqkljekljq4"
+
+temp:
+  file:
+    path: /usr/local/data/priros/files/upload/temp/
+rm:
+  case:
+    document:
+      file:
+        path: /usr/local/data/priros/files/upload/rmcase/
+  document:
+    file:
+      path: /usr/local/data/priros/files/upload/rm/
+    annexment:
+      filename: /usr/local/data/priros/files/doc/ANNEXMENT_PAPER.pdf
+  real:
+    estate:
+      file:
+        path: /usr/local/data/priros/files/upload/realestate/
+
+
+firm:
+  license:
+    file:
+      path: /usr/local/data/priros/files/upload/license/
+  user:
+    profile:
+      file:
+        path: /usr/local/data/priros/files/upload/profile/
+board:
+  upload:
+    file:
+      path: /usr/local/data/priros/files/upload/board/
+consult:
+  upload:
+    file:
+      path: /usr/local/data/priros/files/upload/consult/
+inquiry:
+  upload:
+    file:
+      path: /usr/local/data/priros/files/upload/inquiry/
+request:
+  report:
+    upload:
+      file:
+        path: /usr/local/data/priros/files/upload/requestreport/
+
+buybond:
+  longin:
+    userid: testuser02
+    password: asdf!234
+  base:
+    url: https://test-dlaw.ktnet.com/new/app/
+
+mail:
+  smtp:
+    host: smtp.gmail.com
+    port: 465
+  pop:
+    host: pop.gmail.com
+    port: 995
+  user: priros.rpa@gmail.com
+  password: yevzhmvhhkfgojsy
+  regist:
+    user:
+      url: https://www.priros.com/main/registUser.rm?cmd=
+    file:
+      name: /usr/local/data/priros/files/mail/registUser.html
+
+alim:
+  regist:
+    user:
+      url: https://www.priros.com/main/registUser.rm?cmd=
+  estimate:
+    url: https://www.priros.com/link/estimate.rm?cmd=
+  repay:
+    url: https://www.priros.com/link/repay.rm?cmd=
+  charge:
+    url: https://www.priros.com/link/charge.rm?cmd=
+  main:
+    url: https://www.priros.com
+  firm:
+    review:
+      url: https://www.priros.com/link/clientReview.rm?cmd=
+  matching:
+    url: https://www.priros.com/link/matching.rm?cmd=
+  profile:
+    refused:
+      url: https://www.priros.com/main/helpCenterFaq.rm
+
+app:
+  push:
+    board:
+      url: https://www.priros.com/main/helpCenterNotice.rm
+    market:
+      list:
+        url: https://www.priros.com/main/helpCenterNotice.rm
+
+juso:
+  api:
+    key: U01TX0FVVEgyMDIxMDIwMzE3NTUyODExMDc3NzU=
+
+vender:
+  send:
+    url: https://dlaw.ktnet.com/new/market/%s/s
+  link:
+    url: https://priros.com
+
+aligo:
+  test:
+    mode: N
+
+nice:
+  respond:
+    sucess:
+      url: https://www.priros.com/nice/checkSuccess.rm
+    error:
+      url: https://www.priros.com/nice/checkError.rm
+  pay:
+    mid: nkeli2015m
+    key: Yy/LddM+4QTR/zvLUfkD5TTOn/CW7j0MLvjh29dy8hPePRH+pmjVwEUvvH8EbwiV41YCica0dLSmrgFwmqPdig==
+    join:
+      return:
+        url: https://www.priros.com/nicePay/joinResult.rm
+    regist:
+      account:
+        return:
+          url: https://www.priros.com/nicePay/registAccountResult.rm
+    auth:
+      payment:
+        return:
+          url: https://www.priros.com/nicePay/authPaymentResult.rm
+      common:
+        payment:
+          return:
+            url: https://www.priros.com/nicePay/commonAuthPaymentResult.rm
+    my:
+      page:
+        return:
+          url: https://www.priros.com/nicePay/myPageResult.rm
+    pay:
+      process:
+        return:
+          url: https://www.priros.com/nicePay/payProcessResult.rm
+  normal:
+    pay:
+      mid: nkeli2014m
+      key: AqxSI4v9GacGBrCwzryOFNhMoprz2ZeaWWeH8kjDUQTO1OLS+vpfPQMNHahbjixbczCvw3Y02H71uA1hEWV0vQ==
+    result:
+      url: https://www.priros.com/nicePay/niceNormalPayResult.rm
+  api:
+    account:
+      authentication:
+        token: 7c3c5f7d-a049-4fcf-a6e4-a42c47f1abb7
+        client:
+          id: 05d6138a-89e1-41e2-bb84-e3c48b8f391d
+          secret: 72a9a8f4fb00aaa36e933f8dd344ca72
+
+
+iros:
+  api:
+    url: http://rpa-api-server:8080/app
+
+directlaw:
+  firmcode: MDAXMTIW
