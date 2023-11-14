@@ -1,0 +1,117 @@
+spring:
+  profiles:
+    active: "local"
+    group:
+      "local": "local-db, common"
+      "dev": "dev-db, common"
+      "prod": "prod-db, common"
+
+---
+spring:
+  config:
+    activate:
+      on-profile:
+        - "local-db"
+    import: classpath:application-local.yml
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://219.251.136.162:3307/priros_local
+    username: priros-user
+    password: priros6686!
+
+server:
+  servlet:
+    session:
+      timeout: 30m
+      cookie:
+        http-only: false
+        secure: false
+
+
+logging:
+  file:
+    name: D:\Project\log\priros-api\local.log
+  logback:
+    rolling-policy:
+      max-file-size: 10MB
+      max-history: 7
+---
+
+spring:
+  config:
+    activate:
+      on-profile:
+        - "dev-db"
+    import: classpath:application-dev.yml
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://mysql-db:3306/priros
+    username: priros
+    password: priros6686!
+
+logging:
+  file:
+    name: /var/log/priros-api/app-dev.log
+  logback:
+    rolling-policy:
+      max-file-size: 100MB
+      max-history: 21
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile:
+        - "prod-db"
+    import: classpath:application-prod.yml
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://mysql-db:3306/priros
+    username: priros
+    password: priros6686!
+
+logging:
+  file:
+    name: /var/log/priros-api/app-prod.log
+  logback:
+    rolling policy:
+      max-file-size: 100MB
+      max-history: 30
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile:
+        - "common"
+  output:
+    ansi:
+      enabled: always
+  jwt:
+    secret: bafb1fe8-c7e7-4ad3-a282-cdd53f78304e
+
+mybatis:
+  mapper-locations: mybatis/**.xml
+  type-aliases-package: com.lnt.priros
+
+jackson:
+  deserialization:
+    fail-on-unknown-properties: false
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+    jdbc:
+      audit: OFF
+      sql-only: DEBUG
+      sql-timing: OFF
+      resultset: OFF
+      result-settable: OFF
+      connection: OFF
+      
+       
+

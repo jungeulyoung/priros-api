@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lnt.priros.mapper.BoardMapper">
+
+  <select id="selectRecentList" resultType="Board">
+    select *
+    from board
+    where noticePopupFlag = 'Y'
+      and useFlag = 'Y'
+      and helpCenter = 'Y'
+    order by boardId desc
+  </select>
+
+
+</mapper>
