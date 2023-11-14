@@ -1,0 +1,47 @@
+HELP.md
+# 빌드 결과물 제외
+target/
+build/
+out/
+
+.mvn/wrapper/maven-wrapper.jar
+**/src/main/**/target/
+**/src/test/**/target/
+
+.gradle
+gradle/wrapper/gradle-wrapper.jar
+**/src/main/**/build/
+**/src/test/**/build/
+
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+.class
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+!**/src/main/**/out/
+!**/src/test/**/out/
+local.log
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
