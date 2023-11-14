@@ -1,0 +1,12 @@
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "userId":"remagine4"
+,"password":"dhxortkd2319!"
+}
+
+<> 2023-11-10T141213.403.json
+<> 2023-11-10T141121.403.json
+<> 2023-11-10T141021.500.json
